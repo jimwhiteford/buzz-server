@@ -4,7 +4,7 @@ mongoose.set("strictQuery", true);
 
 async function dbConnect() {
   mongoose
-    .connect(DB_URL, {
+    .connect(process.env.DB_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
