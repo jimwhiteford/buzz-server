@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
-require("dotenv").config();
+
 mongoose.set("strictQuery", true);
 
 async function dbConnect() {
   mongoose
-    .connect(process.env.DB_URL, {
+    .connect(DB_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
